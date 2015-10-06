@@ -20,6 +20,8 @@ class CreateEventViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupHubImages()
+        
+        addTapGestureRecognizers()
     }
     
     func setupHubImages() {
@@ -43,7 +45,53 @@ class CreateEventViewController: UIViewController {
         self.hubVolleyballImage.layer.borderWidth = 1
         self.hubVolleyballImage.layer.borderColor = UIColor.blackColor().CGColor
     }
+    
+    func addTapGestureRecognizers() {
+        let basketballTap = UITapGestureRecognizer(target: self, action: "basketballTapped")
+        self.hubBasketballImage.addGestureRecognizer(basketballTap)
+        
+        let hockeyTap = UITapGestureRecognizer(target: self, action: "hockeyTapped")
+        self.hubHockeyImage.addGestureRecognizer(hockeyTap)
+        
+        let soccerTap = UITapGestureRecognizer(target: self, action: "soccerTapped")
+        self.hubSoccerImage.addGestureRecognizer(soccerTap)
+        
+        let volleyballTap = UITapGestureRecognizer(target: self, action: "volleyballTapped")
+        self.hubVolleyballImage.addGestureRecognizer(volleyballTap)
+    }
+    
+    func basketballTapped() {
+        self.hubBasketballImage.alpha = 1
+        self.hubHockeyImage.alpha = 0.25
+        self.hubSoccerImage.alpha = 0.25
+        self.hubVolleyballImage.alpha = 0.25
+    }
+    
+    func hockeyTapped() {
+        self.hubHockeyImage.alpha = 1
+        self.hubBasketballImage.alpha = 0.25
+        self.hubSoccerImage.alpha = 0.25
+        self.hubVolleyballImage.alpha = 0.25
+    }
+    
+    func soccerTapped() {
+        self.hubSoccerImage.alpha = 1
+        self.hubBasketballImage.alpha = 0.25
+        self.hubHockeyImage.alpha = 0.25
+        self.hubVolleyballImage.alpha = 0.25
+    }
+    
+    func volleyballTapped() {
+        self.hubVolleyballImage.alpha = 1
+        self.hubBasketballImage.alpha = 0.25
+        self.hubHockeyImage.alpha = 0.25
+        self.hubSoccerImage.alpha = 0.25
+    }
 
+    @IBAction func cancelTapped(sender: AnyObject) {
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
