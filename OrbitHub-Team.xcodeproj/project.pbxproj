@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BDD5DBD91BC2DA66002090E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBD81BC2DA66002090E3 /* AppDelegate.swift */; };
-		BDD5DBDB1BC2DA66002090E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBDA1BC2DA66002090E3 /* ViewController.swift */; };
 		BDD5DBDE1BC2DA66002090E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD5DBDC1BC2DA66002090E3 /* Main.storyboard */; };
 		BDD5DBE01BC2DA66002090E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD5DBDF1BC2DA66002090E3 /* Assets.xcassets */; };
 		BDD5DBE31BC2DA66002090E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD5DBE11BC2DA66002090E3 /* LaunchScreen.storyboard */; };
+		BDD5DBEB1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBEA1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBED1BC2E5F0002090E3 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBEC1BC2E5F0002090E3 /* EventCell.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBEF1BC2E694002090E3 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBEE1BC2E694002090E3 /* BadgeView.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBF11BC2E8E6002090E3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBF01BC2E8E6002090E3 /* Helper.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBF31BC2ED41002090E3 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBF21BC2ED41002090E3 /* CircularImageView.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBF71BC2EFED002090E3 /* EventsNearMeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBF61BC2EFED002090E3 /* EventsNearMeNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDD5DBF91BC2F541002090E3 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBF81BC2F541002090E3 /* EventDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		BDD5DBD51BC2DA66002090E3 /* OrbitHub-Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrbitHub-Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD5DBD81BC2DA66002090E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDD5DBDA1BC2DA66002090E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDD5DBDD1BC2DA66002090E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDD5DBDF1BC2DA66002090E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD5DBE21BC2DA66002090E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD5DBE41BC2DA66002090E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD5DBEA1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsNearMeTableViewController.swift; sourceTree = "<group>"; };
+		BDD5DBEC1BC2E5F0002090E3 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		BDD5DBEE1BC2E694002090E3 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		BDD5DBF01BC2E8E6002090E3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BDD5DBF21BC2ED41002090E3 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		BDD5DBF61BC2EFED002090E3 /* EventsNearMeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsNearMeNavigationController.swift; sourceTree = "<group>"; };
+		BDD5DBF81BC2F541002090E3 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1A31541BC3473200A791B9 /* Create Event */ = {
+			isa = PBXGroup;
+			children = (
+				BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */,
+			);
+			name = "Create Event";
+			sourceTree = "<group>";
+		};
 		BDD5DBCC1BC2DA66002090E3 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +77,44 @@
 			isa = PBXGroup;
 			children = (
 				BDD5DBD81BC2DA66002090E3 /* AppDelegate.swift */,
-				BDD5DBDA1BC2DA66002090E3 /* ViewController.swift */,
 				BDD5DBDC1BC2DA66002090E3 /* Main.storyboard */,
+				BDD5DBF41BC2ED72002090E3 /* Model */,
+				BDD5DBF51BC2ED7B002090E3 /* Events */,
+				BDD5DBFA1BC2F547002090E3 /* Event Details */,
+				BD1A31541BC3473200A791B9 /* Create Event */,
 				BDD5DBDF1BC2DA66002090E3 /* Assets.xcassets */,
 				BDD5DBE11BC2DA66002090E3 /* LaunchScreen.storyboard */,
 				BDD5DBE41BC2DA66002090E3 /* Info.plist */,
 			);
 			path = "OrbitHub-Team";
+			sourceTree = "<group>";
+		};
+		BDD5DBF41BC2ED72002090E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDD5DBEE1BC2E694002090E3 /* BadgeView.swift */,
+				BDD5DBF21BC2ED41002090E3 /* CircularImageView.swift */,
+				BDD5DBF01BC2E8E6002090E3 /* Helper.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BDD5DBF51BC2ED7B002090E3 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				BDD5DBEC1BC2E5F0002090E3 /* EventCell.swift */,
+				BDD5DBEA1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift */,
+				BDD5DBF61BC2EFED002090E3 /* EventsNearMeNavigationController.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		BDD5DBFA1BC2F547002090E3 /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				BDD5DBF81BC2F541002090E3 /* EventDetailsViewController.swift */,
+			);
+			name = "Event Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD5DBDB1BC2DA66002090E3 /* ViewController.swift in Sources */,
+				BDD5DBF71BC2EFED002090E3 /* EventsNearMeNavigationController.swift in Sources */,
+				BDD5DBEF1BC2E694002090E3 /* BadgeView.swift in Sources */,
+				BDD5DBF31BC2ED41002090E3 /* CircularImageView.swift in Sources */,
+				BDD5DBEB1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift in Sources */,
+				BDD5DBF91BC2F541002090E3 /* EventDetailsViewController.swift in Sources */,
+				BDD5DBF11BC2E8E6002090E3 /* Helper.swift in Sources */,
+				BDD5DBED1BC2E5F0002090E3 /* EventCell.swift in Sources */,
 				BDD5DBD91BC2DA66002090E3 /* AppDelegate.swift in Sources */,
+				BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +309,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OrbitHub-Team/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apps.OrbitHub-Team";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -260,9 +322,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OrbitHub-Team/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apps.OrbitHub-Team";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -285,6 +349,7 @@
 				BDD5DBE91BC2DA66002090E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
