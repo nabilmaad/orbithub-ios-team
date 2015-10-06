@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA3B541BC420A500465A2B /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B531BC420A500465A2B /* DateTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA3B561BC4609300465A2B /* AddPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B551BC4609300465A2B /* AddPlayersTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA3B581BC460D300465A2B /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B571BC460D300465A2B /* PlayerCell.swift */; settings = {ASSET_TAGS = (); }; };
 		BDD5DBD91BC2DA66002090E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD5DBD81BC2DA66002090E3 /* AppDelegate.swift */; };
 		BDD5DBDE1BC2DA66002090E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD5DBDC1BC2DA66002090E3 /* Main.storyboard */; };
 		BDD5DBE01BC2DA66002090E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD5DBDF1BC2DA66002090E3 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		BDAA3B531BC420A500465A2B /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
+		BDAA3B551BC4609300465A2B /* AddPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayersTableViewController.swift; sourceTree = "<group>"; };
+		BDAA3B571BC460D300465A2B /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		BDD5DBD51BC2DA66002090E3 /* OrbitHub-Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrbitHub-Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD5DBD81BC2DA66002090E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD5DBDD1BC2DA66002090E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */,
+				BDAA3B531BC420A500465A2B /* DateTableViewController.swift */,
+				BDAA3B551BC4609300465A2B /* AddPlayersTableViewController.swift */,
+				BDAA3B571BC460D300465A2B /* PlayerCell.swift */,
 			);
 			name = "Create Event";
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDAA3B581BC460D300465A2B /* PlayerCell.swift in Sources */,
 				BDD5DBF71BC2EFED002090E3 /* EventsNearMeNavigationController.swift in Sources */,
 				BDD5DBEF1BC2E694002090E3 /* BadgeView.swift in Sources */,
 				BDD5DBF31BC2ED41002090E3 /* CircularImageView.swift in Sources */,
@@ -194,6 +204,8 @@
 				BDD5DBF91BC2F541002090E3 /* EventDetailsViewController.swift in Sources */,
 				BDD5DBF11BC2E8E6002090E3 /* Helper.swift in Sources */,
 				BDD5DBED1BC2E5F0002090E3 /* EventCell.swift in Sources */,
+				BDAA3B541BC420A500465A2B /* DateTableViewController.swift in Sources */,
+				BDAA3B561BC4609300465A2B /* AddPlayersTableViewController.swift in Sources */,
 				BDD5DBD91BC2DA66002090E3 /* AppDelegate.swift in Sources */,
 				BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */,
 			);

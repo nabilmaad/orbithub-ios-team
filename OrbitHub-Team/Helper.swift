@@ -15,6 +15,10 @@ let locations = NSMutableArray(array: ["RA Centre", "uOttawa Lees Gym", "OSSC", 
 let times = NSMutableArray(array: ["Tomorrow at 15:00", "Wednesday Oct. 9 at 10:00", "Wednesday Oct. 9 at 16:00", "Thursday Oct. 10 at 13:30", "Friday Oct. 11 at 12:00"])
 let playersNeeded = NSMutableArray(array: ["6", "4", "2", "3", "1"])
 
+// MARK: Add players
+let addPlayersImages = ["nabil", "franck", "mona", "brooke", "kim"]
+let addPlayersNames = ["Nabil M.", "Franck M.", "Mona H.", "Brooke S.", "Kim T"]
+
 // MARK: Colors
 let ORBITHUB_ORANGE = "#FDB11E"
 

@@ -15,6 +15,14 @@ class CreateEventViewController: UIViewController {
     @IBOutlet weak var hubSoccerImage: UIImageView!
     @IBOutlet weak var hubVolleyballImage: UIImageView!
     
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationView: UIView!
+    @IBOutlet weak var addPlayersVIew: UIView!
+    @IBOutlet weak var addPlayersLabel: UILabel!
+    
+    var sportSelected: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +30,21 @@ class CreateEventViewController: UIViewController {
         setupHubImages()
         
         addTapGestureRecognizers()
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "dateSetID", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "dateSet:", name: "dateSetID", object: nil)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "playersSetID", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playersSet:", name: "playersSetID", object: nil)
+    }
+    
+    func dateSet(notification: NSNotification) {
+        self.dateLabel.text! = notification.userInfo!["date"] as! String
+    }
+    
+    func playersSet(notification: NSNotification) {
+        let numberOfPlayers = notification.userInfo!["numberOfPlayers"] as! Int
+        self.addPlayersLabel.text! = "\(numberOfPlayers) players"
     }
     
     func setupHubImages() {
@@ -47,6 +70,7 @@ class CreateEventViewController: UIViewController {
     }
     
     func addTapGestureRecognizers() {
+        // Hubs
         let basketballTap = UITapGestureRecognizer(target: self, action: "basketballTapped")
         self.hubBasketballImage.addGestureRecognizer(basketballTap)
         
@@ -58,13 +82,24 @@ class CreateEventViewController: UIViewController {
         
         let volleyballTap = UITapGestureRecognizer(target: self, action: "volleyballTapped")
         self.hubVolleyballImage.addGestureRecognizer(volleyballTap)
+        
+        // Sections
+        let dateTap = UITapGestureRecognizer(target: self, action: "dateTapped")
+        self.dateView.addGestureRecognizer(dateTap)
+        
+        let addPlayersTap = UITapGestureRecognizer(target: self, action: "addPlayersTapped")
+        self.addPlayersVIew.addGestureRecognizer(addPlayersTap)
     }
     
+    // MARK: Tap recognizer functions
+    // Hubs
     func basketballTapped() {
         self.hubBasketballImage.alpha = 1
         self.hubHockeyImage.alpha = 0.25
         self.hubSoccerImage.alpha = 0.25
         self.hubVolleyballImage.alpha = 0.25
+        
+        self.sportSelected = "basketball"
     }
     
     func hockeyTapped() {
@@ -72,6 +107,8 @@ class CreateEventViewController: UIViewController {
         self.hubBasketballImage.alpha = 0.25
         self.hubSoccerImage.alpha = 0.25
         self.hubVolleyballImage.alpha = 0.25
+        
+        self.sportSelected = "hockey"
     }
     
     func soccerTapped() {
@@ -79,6 +116,8 @@ class CreateEventViewController: UIViewController {
         self.hubBasketballImage.alpha = 0.25
         self.hubHockeyImage.alpha = 0.25
         self.hubVolleyballImage.alpha = 0.25
+        
+        self.sportSelected = "soccer"
     }
     
     func volleyballTapped() {
@@ -86,6 +125,19 @@ class CreateEventViewController: UIViewController {
         self.hubBasketballImage.alpha = 0.25
         self.hubHockeyImage.alpha = 0.25
         self.hubSoccerImage.alpha = 0.25
+        
+        self.sportSelected = "volleyball"
+    }
+    
+    // Sections
+    func dateTapped() {
+        let dateViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateTableViewController") as! DateTableViewController
+        self.navigationController?.pushViewController(dateViewController, animated: true)
+    }
+    
+    func addPlayersTapped() {
+        let addPlayersViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AddPlayersTableViewController") as! AddPlayersTableViewController
+        self.navigationController?.pushViewController(addPlayersViewController, animated: true)
     }
 
     @IBAction func cancelTapped(sender: AnyObject) {
