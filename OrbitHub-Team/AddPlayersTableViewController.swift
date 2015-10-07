@@ -47,7 +47,13 @@ class AddPlayersTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
         
-        let numberOfSelected = tableView.indexPathsForSelectedRows?.count
+        var numberOfSelected: Int?
+        if tableView.indexPathsForSelectedRows == nil {
+            numberOfSelected = 0
+        } else {
+            numberOfSelected = tableView.indexPathsForSelectedRows?.count
+        }
+        
         NSNotificationCenter.defaultCenter().postNotificationName("playersSetID", object: nil, userInfo: ["numberOfPlayers": numberOfSelected!])
     }
 

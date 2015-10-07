@@ -17,15 +17,15 @@ class DateTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Initialize start date
-        let currentCalendar = NSCalendar.currentCalendar()
-        let components = currentCalendar.components(NSCalendarUnit.Hour.union(NSCalendarUnit.Minute), fromDate: NSDate())
-        self.startDateLabel.text! = "Today at \(components.hour):\(components.minute)"
+        let dateFormat = NSDateFormatter()
+        dateFormat.dateFormat = "HH:mm"
+        self.startDateLabel.text! = "Today at \(dateFormat.stringFromDate(NSDate()))"
     }
 
     @IBAction func datePickerChanged(sender: UIDatePicker) {
         let dateFormat = NSDateFormatter()
         dateFormat.dateFormat = "EEE HH:mm"
-        self.startDateLabel.text! = "\(getDayOfWeek(sender.date)) at \(getTimeFromDate(sender.date))"
+        self.startDateLabel.text! = "\(getDayOfWeek(sender.date)) \(getMonth(sender.date)). \(getDay(sender.date)) at \(getTimeFromDate(sender.date))"
         NSNotificationCenter.defaultCenter().postNotificationName("dateSetID", object: nil, userInfo: ["date": self.startDateLabel.text!])
     }
     
@@ -40,7 +40,19 @@ class DateTableViewController: UITableViewController {
         }
         
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "EEE"
+        formatter.dateFormat = "EEEE"
+        return formatter.stringFromDate(date)
+    }
+    
+    func getMonth(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MMM"
+        return formatter.stringFromDate(date)
+    }
+    
+    func getDay(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "d"
         return formatter.stringFromDate(date)
     }
     

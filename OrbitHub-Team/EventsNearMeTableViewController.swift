@@ -17,6 +17,9 @@ class EventsNearMeTableViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "joinedID", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "joined:", name: "joinedID", object: nil)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "createEventDoneID", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "createEventDone:", name: "createEventDoneID", object: nil)
     }
     
     func joined(notification: NSNotification) {
@@ -25,9 +28,9 @@ class EventsNearMeTableViewController: UITableViewController {
         self.joinedGames.addObject(0)
         tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
     }
-
-    @IBAction func createEventButtonTapped(sender: AnyObject) {
-        
+    
+    func createEventDone(notification: NSNotification) {
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source

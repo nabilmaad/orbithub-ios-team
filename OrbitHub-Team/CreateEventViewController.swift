@@ -18,8 +18,18 @@ class CreateEventViewController: UIViewController {
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationView: UIView!
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var addPlayersVIew: UIView!
     @IBOutlet weak var addPlayersLabel: UILabel!
+    
+    @IBOutlet weak var createBarButton: UIBarButtonItem!
+    
+    var numberOfPlayers = 0
+    
+    // Booleans to enable create button
+    var hubSelected = false
+    var dateSelected = false
+    var locationSet = false
     
     var sportSelected: String!
     
@@ -40,11 +50,23 @@ class CreateEventViewController: UIViewController {
     
     func dateSet(notification: NSNotification) {
         self.dateLabel.text! = notification.userInfo!["date"] as! String
+        
+        self.dateSelected = true
+        if self.hubSelected && self.locationSet {
+            self.createBarButton.enabled = true
+        }
     }
     
     func playersSet(notification: NSNotification) {
         let numberOfPlayers = notification.userInfo!["numberOfPlayers"] as! Int
-        self.addPlayersLabel.text! = "\(numberOfPlayers) players"
+        self.numberOfPlayers = numberOfPlayers
+        self.addPlayersLabel.textColor = colorWithHexString("#0000EE")
+        
+        if numberOfPlayers == 1 {
+            self.addPlayersLabel.text! = "\(numberOfPlayers) player"
+        } else {
+            self.addPlayersLabel.text! = "\(numberOfPlayers) players"
+        }
     }
     
     func setupHubImages() {
@@ -100,6 +122,11 @@ class CreateEventViewController: UIViewController {
         self.hubVolleyballImage.alpha = 0.25
         
         self.sportSelected = "basketball"
+        
+        self.hubSelected = true
+        if self.dateSelected && self.locationSet {
+            self.createBarButton.enabled = true
+        }
     }
     
     func hockeyTapped() {
@@ -109,6 +136,11 @@ class CreateEventViewController: UIViewController {
         self.hubVolleyballImage.alpha = 0.25
         
         self.sportSelected = "hockey"
+        
+        self.hubSelected = true
+        if self.dateSelected && self.locationSet {
+            self.createBarButton.enabled = true
+        }
     }
     
     func soccerTapped() {
@@ -118,6 +150,11 @@ class CreateEventViewController: UIViewController {
         self.hubVolleyballImage.alpha = 0.25
         
         self.sportSelected = "soccer"
+        
+        self.hubSelected = true
+        if self.dateSelected && self.locationSet {
+            self.createBarButton.enabled = true
+        }
     }
     
     func volleyballTapped() {
@@ -127,12 +164,29 @@ class CreateEventViewController: UIViewController {
         self.hubSoccerImage.alpha = 0.25
         
         self.sportSelected = "volleyball"
+        
+        self.hubSelected = true
+        if self.dateSelected && self.locationSet {
+            self.createBarButton.enabled = true
+        }
     }
     
     // Sections
     func dateTapped() {
         let dateViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DateTableViewController") as! DateTableViewController
         self.navigationController?.pushViewController(dateViewController, animated: true)
+    }
+    
+    @IBAction func locationTextFieldChanged(sender: UITextField) {
+        if sender.text!.characters.count > 0 {
+            self.locationSet = true
+            if self.dateSelected && self.hubSelected {
+                self.createBarButton.enabled = true
+            }
+        } else {
+            self.locationSet = false
+            self.createBarButton.enabled = false
+        }
     }
     
     func addPlayersTapped() {
@@ -142,6 +196,17 @@ class CreateEventViewController: UIViewController {
 
     @IBAction func cancelTapped(sender: AnyObject) {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func createButtonTapped(sender: AnyObject) {
+        hubs.addObject("hub_\(sportSelected)")
+        locations.addObject(self.locationTextField.text!)
+        times.addObject(self.dateLabel.text!)
+        playersNeeded.addObject(String(14 - self.numberOfPlayers))
+        
+        self.navigationController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName("createEventDoneID", object: nil)
+        })
     }
     
     /*
