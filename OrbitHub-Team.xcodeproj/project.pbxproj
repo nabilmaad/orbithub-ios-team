@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA31B01BC5CAE90025A9B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA31AF1BC5CAE90025A9B4 /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA31B31BC5D4A80025A9B4 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA31B21BC5D4A80025A9B4 /* SearchNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDAA31B51BC5D6250025A9B4 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA31B41BC5D6250025A9B4 /* SearchResultsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BDAA3B541BC420A500465A2B /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B531BC420A500465A2B /* DateTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BDAA3B561BC4609300465A2B /* AddPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B551BC4609300465A2B /* AddPlayersTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BDAA3B581BC460D300465A2B /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA3B571BC460D300465A2B /* PlayerCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		BD1A31521BC3472A00A791B9 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		BDAA31AF1BC5CAE90025A9B4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BDAA31B21BC5D4A80025A9B4 /* SearchNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		BDAA31B41BC5D6250025A9B4 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		BDAA3B531BC420A500465A2B /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		BDAA3B551BC4609300465A2B /* AddPlayersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayersTableViewController.swift; sourceTree = "<group>"; };
 		BDAA3B571BC460D300465A2B /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
@@ -66,6 +72,16 @@
 			name = "Create Event";
 			sourceTree = "<group>";
 		};
+		BDAA31B11BC5CAEE0025A9B4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BDAA31B21BC5D4A80025A9B4 /* SearchNavigationController.swift */,
+				BDAA31AF1BC5CAE90025A9B4 /* SearchViewController.swift */,
+				BDAA31B41BC5D6250025A9B4 /* SearchResultsTableViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		BDD5DBCC1BC2DA66002090E3 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +107,7 @@
 				BDD5DBF51BC2ED7B002090E3 /* Events */,
 				BDD5DBFA1BC2F547002090E3 /* Event Details */,
 				BD1A31541BC3473200A791B9 /* Create Event */,
+				BDAA31B11BC5CAEE0025A9B4 /* Search */,
 				BDD5DBDF1BC2DA66002090E3 /* Assets.xcassets */,
 				BDD5DBE11BC2DA66002090E3 /* LaunchScreen.storyboard */,
 				BDD5DBE41BC2DA66002090E3 /* Info.plist */,
@@ -198,15 +215,18 @@
 			files = (
 				BDAA3B581BC460D300465A2B /* PlayerCell.swift in Sources */,
 				BDD5DBF71BC2EFED002090E3 /* EventsNearMeNavigationController.swift in Sources */,
+				BDAA31B51BC5D6250025A9B4 /* SearchResultsTableViewController.swift in Sources */,
 				BDD5DBEF1BC2E694002090E3 /* BadgeView.swift in Sources */,
 				BDD5DBF31BC2ED41002090E3 /* CircularImageView.swift in Sources */,
 				BDD5DBEB1BC2E5BF002090E3 /* EventsNearMeTableViewController.swift in Sources */,
 				BDD5DBF91BC2F541002090E3 /* EventDetailsViewController.swift in Sources */,
 				BDD5DBF11BC2E8E6002090E3 /* Helper.swift in Sources */,
 				BDD5DBED1BC2E5F0002090E3 /* EventCell.swift in Sources */,
+				BDAA31B01BC5CAE90025A9B4 /* SearchViewController.swift in Sources */,
 				BDAA3B541BC420A500465A2B /* DateTableViewController.swift in Sources */,
 				BDAA3B561BC4609300465A2B /* AddPlayersTableViewController.swift in Sources */,
 				BDD5DBD91BC2DA66002090E3 /* AppDelegate.swift in Sources */,
+				BDAA31B31BC5D4A80025A9B4 /* SearchNavigationController.swift in Sources */,
 				BD1A31531BC3472A00A791B9 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
