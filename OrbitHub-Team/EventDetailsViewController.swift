@@ -128,7 +128,7 @@ class EventDetailsViewController: UIViewController {
     @IBAction func joinTeam1ButtonTapped(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("joinedID", object: nil)
         UIView.transitionWithView(self.view, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.player5Image.image = UIImage(named: "self")
+            self.player5Image.image = UIImage(named: "tim")
             self.joinTeam1Button.enabled = false
             self.joinTeam1Button.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
             self.joinTeam1Button.backgroundColor = UIColor(red: 90/255, green: 200/255, blue: 251/255, alpha: 0.5)
@@ -142,7 +142,7 @@ class EventDetailsViewController: UIViewController {
     
     @IBAction func joinTeam2ButtonTapped(sender: AnyObject) {
         UIView.transitionWithView(self.view, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.opponent5Image.image = UIImage(named: "self")
+            self.opponent5Image.image = UIImage(named: "tim")
             self.joinTeam2Button.enabled = false
             self.joinTeam2Button.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
             self.joinTeam2Button.backgroundColor = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 0.5)
